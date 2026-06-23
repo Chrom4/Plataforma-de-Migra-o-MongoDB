@@ -1,0 +1,189 @@
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.appHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.appHeader h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+  color: #b8bed1;
+}
+
+.modeBadge {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.modeBadge.dryRun {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #94a3b8;
+}
+
+.modeBadge.live {
+  background: #3a1c25;
+  border: 1px solid #7f3048;
+  color: #ffd5df;
+}
+
+.card {
+  background: #181d2d;
+  border: 1px solid #2b3247;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+select,
+input,
+button {
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid #3b4460;
+  background: #0f1320;
+  color: #e8ecff;
+  padding: 0.45rem 0.7rem;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.progressBar {
+  height: 14px;
+  width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #0f1320;
+  border: 1px solid #3b4460;
+}
+
+.progressBar > div {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  margin-bottom: 0;
+  color: #b8bed1;
+  font-size: 0.9rem;
+}
+
+.alert.error {
+  background: #3a1c25;
+  border: 1px solid #7f3048;
+  color: #ffd5df;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalContent {
+  width: min(420px, 100%);
+  background: #181d2d;
+  border: 1px solid #2b3247;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.modalContent p {
+  margin-bottom: 0.75rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.jobCard.status-success {
+  border-color: #166534;
+}
+
+.jobCard.status-error {
+  border-color: #7f3048;
+}
+
+.jobCard.status-running,
+.jobCard.status-started {
+  border-color: #1d4ed8;
+}
+
+.statusLabel {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-success .statusLabel {
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+.status-error .statusLabel {
+  background: #3a1c25;
+  color: #ffd5df;
+}
+
+.status-running .statusLabel,
+.status-started .statusLabel {
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
